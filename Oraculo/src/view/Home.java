@@ -1,7 +1,7 @@
 package view;
 
 
-import Cadastros.Cliente;
+import view.cadastros.ClienteForm;
 import Cadastros.ContasCaixa;
 import Cadastros.FormasPagto;
 import view.cadastros.ProdutosForm;
@@ -194,7 +194,7 @@ public class Home extends javax.swing.JFrame {
 
     // Métodos para abrir a tela de cadastros
     private void cadastroClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroClienteActionPerformed
-        Cliente cadastroCliente = new Cliente();
+        ClienteForm cadastroCliente = new ClienteForm();
         painelHome.add(cadastroCliente);
         cadastroCliente.setVisible(true);
     }//GEN-LAST:event_cadastroClienteActionPerformed
