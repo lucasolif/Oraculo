@@ -32,7 +32,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         btnFeminino = new javax.swing.JRadioButton();
         btnOutros = new javax.swing.JRadioButton();
         campoCpfCnpj = new javax.swing.JTextField();
-        campoContato = new javax.swing.JTextField();
+        campoRg = new javax.swing.JTextField();
         campoNome = new javax.swing.JTextField();
         campoRazaoSocial = new javax.swing.JTextField();
         campoTelefone = new javax.swing.JTextField();
@@ -47,6 +47,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         campoCidade = new javax.swing.JTextField();
         campoComplemento = new javax.swing.JTextField();
         campoCep = new javax.swing.JTextField();
+        campoEndereco = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -59,7 +60,6 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -69,8 +69,6 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         campoEstado = new javax.swing.JComboBox<>();
         btnSalvar = new javax.swing.JToggleButton();
         btnCancelar = new javax.swing.JToggleButton();
-
-        painelCadastroCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         painelTipoPessoa.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         painelTipoPessoa.setLayout(new javax.swing.BoxLayout(painelTipoPessoa, javax.swing.BoxLayout.LINE_AXIS));
@@ -92,8 +90,6 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             }
         });
         painelTipoPessoa.add(btnPessoaJuridica);
-
-        painelCadastroCliente.add(painelTipoPessoa, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 80, 120, 34));
 
         painelOrientacaoSexual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -140,122 +136,89 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                 .addContainerGap())
         );
 
-        painelCadastroCliente.add(painelOrientacaoSexual, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 178, -1, -1));
-
         campoCpfCnpj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         campoCpfCnpj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoCpfCnpjActionPerformed(evt);
             }
         });
-        painelCadastroCliente.add(campoCpfCnpj, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 96, 164, -1));
 
-        campoContato.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoContato, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 189, 101, -1));
+        campoRg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         campoNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 142, 333, -1));
 
         campoRazaoSocial.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoRazaoSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 96, 243, -1));
 
         campoTelefone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 237, 113, -1));
 
         campoCelular.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoCelular, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 237, 115, -1));
 
         campoEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 237, 293, -1));
 
         campoDataNascimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoDataNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 189, 103, -1));
 
         campoIM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoIM, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 189, 140, -1));
 
         campoIE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoIE, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 142, 200, -1));
 
         barraBusca.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(barraBusca, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 17, 433, -1));
 
         campoBairro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 369, 165, -1));
 
         campoNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 323, -1, -1));
 
         campoCidade.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoCidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 369, 149, -1));
 
         campoComplemento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoComplemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 415, 421, -1));
 
         campoCep.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoCep, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 323, 119, -1));
+
+        campoEndereco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        campoEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoEnderecoActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("CPF/CNPJ*");
-        painelCadastroCliente.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 74, 62, -1));
 
         jLabel3.setText("Nome Fantasia *");
-        painelCadastroCliente.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 74, -1, -1));
 
         jLabel5.setText("Razão Social *");
-        painelCadastroCliente.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 126, -1, -1));
 
         jLabel6.setText("RG");
-        painelCadastroCliente.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 173, 28, -1));
 
         jLabel2.setText("Telefone");
-        painelCadastroCliente.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(133, 221, -1, -1));
 
         jLabel4.setText("Celular *");
-        painelCadastroCliente.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 219, -1, -1));
 
         jLabel7.setText("Data Nascimento");
-        painelCadastroCliente.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 173, -1, -1));
 
         jLabel8.setText("Insc Municipal");
-        painelCadastroCliente.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 173, -1, -1));
 
         jLabel9.setText("Insc Estadual");
-        painelCadastroCliente.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 126, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Buscar");
-        painelCadastroCliente.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, 47, 18));
 
         jLabel11.setText("E-mail");
-        painelCadastroCliente.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 220, -1, -1));
 
         jLabel12.setText("Logradouro");
-        painelCadastroCliente.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 307, -1, -1));
-
-        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 323, 214, 18));
 
         jLabel14.setText("Número");
-        painelCadastroCliente.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 307, -1, -1));
 
         jLabel15.setText("CEP");
-        painelCadastroCliente.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 307, -1, -1));
 
         jLabel16.setText("Bairro");
-        painelCadastroCliente.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 353, -1, -1));
 
         jLabel17.setText("Cidade");
-        painelCadastroCliente.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 353, -1, -1));
 
         jLabel18.setText("Estado");
-        painelCadastroCliente.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 353, -1, -1));
 
         jLabel19.setText("Complemento");
-        painelCadastroCliente.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 399, -1, -1));
 
         campoEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Estado", "AC", "AL", "AP", "AM", "BA", "CE", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "S", "SE", "TO", "DF" }));
         campoEstado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        painelCadastroCliente.add(campoEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 369, 83, 18));
 
         btnSalvar.setBackground(new java.awt.Color(0, 255, 0));
         btnSalvar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -266,26 +229,218 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
-        painelCadastroCliente.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 110, -1));
 
         btnCancelar.setBackground(new java.awt.Color(255, 0, 0));
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        painelCadastroCliente.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 110, -1));
+
+        javax.swing.GroupLayout painelCadastroClienteLayout = new javax.swing.GroupLayout(painelCadastroCliente);
+        painelCadastroCliente.setLayout(painelCadastroClienteLayout);
+        painelCadastroClienteLayout.setHorizontalGroup(
+            painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(barraBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(painelTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel5)
+                .addGap(272, 272, 272)
+                .addComponent(jLabel9))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(campoIE, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoRg, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(campoIM, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(campoDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addComponent(painelOrientacaoSexual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel4)
+                .addGap(82, 82, 82)
+                .addComponent(jLabel2)
+                .addGap(80, 80, 80)
+                .addComponent(jLabel11))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(campoCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(campoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel12))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(campoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(campoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15)
+                    .addComponent(campoCep, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel16)
+                .addGap(146, 146, 146)
+                .addComponent(jLabel17)
+                .addGap(124, 124, 124)
+                .addComponent(jLabel18))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(campoBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(campoCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(campoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel19))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(310, 310, 310)
+                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        painelCadastroClienteLayout.setVerticalGroup(
+            painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(barraBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(painelTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(6, 6, 6)
+                        .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(6, 6, 6)
+                        .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel9))
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoIE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(0, 0, 0)
+                        .addComponent(campoRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(0, 0, 0)
+                        .addComponent(campoIM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(0, 0, 0)
+                        .addComponent(campoDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(painelOrientacaoSexual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jLabel2))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel11)))
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel14)
+                        .addGap(0, 0, 0)
+                        .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(campoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(campoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                        .addComponent(jLabel15)
+                        .addGap(0, 0, 0)
+                        .addComponent(campoCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18))
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addComponent(jLabel19)
+                .addGap(0, 0, 0)
+                .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalvar)
+                    .addComponent(btnCancelar)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(painelCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelCadastroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -310,12 +465,54 @@ public class ClienteForm extends javax.swing.JInternalFrame {
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         
         //Atribuindo os dados inseridos nos formulario a variáveis
+        String nome = campoRazaoSocial.getText();
+        String fatansia = campoNome.getText();
+        int cpfCnpj;
+        String rg = campoRg.getText();
+        String dataNascimento = campoDataNascimento.getText();
+        String telefone = campoTelefone.getText();
+        String celular = campoCelular.getText();
+        String email = campoEmail.getText();
+        String endereco = campoEndereco.getText();
+        String numero = campoNum.getText();
+        String cep = campoCep.getText();
+        String bairro = campoBairro.getText();
+        String cidade = campoCidade.getText();
+        String estado = campoEstado.getSelectedItem().toString();
+        String complemento = campoComplemento.getText();
+        String sexo;
+        
+        if(btnFeminino.isSelected()){
+            sexo = "Feminino";
+        }
+        if(btnMasculino.isSelected()){
+            sexo = "Masculino";
+        }
+        if(btnOutros.isSelected()){
+            sexo = "Outros";
+        }
+
+        //Tratando as exceções dos dados que são números (inteiros e floats)
+        try{
+            cpfCnpj = Integer.parseInt(campoCpfCnpj.getText());
+        }catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "CPF não informado", "Atenção", JOptionPane.WARNING_MESSAGE);
+            
+            return;
+        }        
+        
+        
+        
         
         
         
         
         
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void campoEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEnderecoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoEnderecoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -332,22 +529,22 @@ public class ClienteForm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField campoCep;
     private javax.swing.JTextField campoCidade;
     private javax.swing.JTextField campoComplemento;
-    private javax.swing.JTextField campoContato;
     private javax.swing.JTextField campoCpfCnpj;
     private javax.swing.JTextField campoDataNascimento;
     private javax.swing.JTextField campoEmail;
+    private javax.swing.JTextField campoEndereco;
     private javax.swing.JComboBox<String> campoEstado;
     private javax.swing.JTextField campoIE;
     private javax.swing.JTextField campoIM;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoNum;
     private javax.swing.JTextField campoRazaoSocial;
+    private javax.swing.JTextField campoRg;
     private javax.swing.JTextField campoTelefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;

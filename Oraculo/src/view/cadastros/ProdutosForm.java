@@ -408,7 +408,6 @@ public class ProdutosForm extends javax.swing.JInternalFrame {
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
         
         //Atribuindo os dados inseridos nos formulario a variáveis
-        String codProduto = codigoProduto.getText();
         String descProduto = descricaoProduto.getText();
         String codEan = codigoEanProduto.getText();
         String codGtin = codigoGtinProduto.getText();
