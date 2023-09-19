@@ -124,16 +124,11 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             painelOrientacaoSexualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelOrientacaoSexualLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelOrientacaoSexualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelOrientacaoSexualLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(btnMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addGroup(painelOrientacaoSexualLayout.createSequentialGroup()
-                        .addGroup(painelOrientacaoSexualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnFeminino)
-                            .addComponent(btnOutros))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(painelOrientacaoSexualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFeminino)
+                    .addComponent(btnOutros)
+                    .addComponent(btnMasculino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         campoCpfCnpj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -240,103 +235,101 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         painelCadastroClienteLayout.setHorizontalGroup(
             painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(barraBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(painelTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
+                .addGap(15, 15, 15)
                 .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel5)
-                .addGap(272, 272, 272)
-                .addComponent(jLabel9))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(campoIE, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campoRg, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(campoIM, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                            .addComponent(campoCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(12, 12, 12)
+                            .addComponent(campoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(12, 12, 12)
+                            .addComponent(campoEmail))
+                        .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                            .addComponent(campoNome, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(12, 12, 12)
+                            .addComponent(campoIE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelCadastroClienteLayout.createSequentialGroup()
+                            .addComponent(painelTipoPessoa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3))))
                     .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(campoDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12)
-                .addComponent(painelOrientacaoSexual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel4)
-                .addGap(82, 82, 82)
-                .addComponent(jLabel2)
-                .addGap(80, 80, 80)
-                .addComponent(jLabel11))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(campoCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(campoTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(campoEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel12))
-                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(campoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(campoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(campoCep, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel16)
-                .addGap(146, 146, 146)
-                .addComponent(jLabel17)
-                .addGap(124, 124, 124)
-                .addComponent(jLabel18))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(campoBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(campoCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(campoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel19))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                .addGap(310, 310, 310)
-                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(barraBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(272, 272, 272)
+                                .addComponent(jLabel9))
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoRg, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(12, 12, 12)
+                                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(campoIM, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(12, 12, 12)
+                                .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(campoDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12)
+                                .addComponent(painelOrientacaoSexual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel2)
+                                .addGap(80, 80, 80)
+                                .addComponent(jLabel11))
+                            .addComponent(jLabel19)
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addGap(304, 304, 304)
+                                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                    .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                            .addComponent(jLabel12)
+                                            .addGap(158, 158, 158))
+                                        .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                            .addComponent(campoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                    .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel14)
+                                        .addComponent(campoNum, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel15)
+                                        .addComponent(campoCep, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                    .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCadastroClienteLayout.createSequentialGroup()
+                                            .addComponent(jLabel16)
+                                            .addGap(146, 146, 146)
+                                            .addComponent(jLabel17)
+                                            .addGap(139, 139, 139))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCadastroClienteLayout.createSequentialGroup()
+                                            .addComponent(campoBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(12, 12, 12)
+                                            .addComponent(campoCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(14, 14, 14)))
+                                    .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel18)
+                                        .addComponent(campoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32))
         );
         painelCadastroClienteLayout.setVerticalGroup(
             painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,19 +340,21 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                     .addGroup(painelCadastroClienteLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(barraBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
                 .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(painelTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(0, 0, 0)
+                                .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, 0)
+                                .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(6, 6, 6)
-                        .addComponent(campoCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(6, 6, 6)
-                        .addComponent(campoRazaoSocial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(45, 45, 45)
+                        .addComponent(painelTipoPessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12)
                 .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
@@ -406,7 +401,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                         .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(campoNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(campoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelCadastroClienteLayout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCadastroClienteLayout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addGap(0, 0, 0)
                         .addComponent(campoCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -426,7 +421,8 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                 .addGap(17, 17, 17)
                 .addGroup(painelCadastroClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalvar)
-                    .addComponent(btnCancelar)))
+                    .addComponent(btnCancelar))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -435,12 +431,11 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(painelCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(painelCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelCadastroCliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(painelCadastroCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -466,21 +461,23 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         
         //Atribuindo os dados inseridos nos formulario a variáveis
         String nome = campoRazaoSocial.getText();
-        String fatansia = campoNome.getText();
-        int cpfCnpj;
+        String fantasia = campoNome.getText();
+        String cpfCnpj = campoCpfCnpj.getText();
         String rg = campoRg.getText();
         String dataNascimento = campoDataNascimento.getText();
+        String inscriMunicipal = campoIM.getText();
+        String inscriEstadual = campoIE.getText();
         String telefone = campoTelefone.getText();
         String celular = campoCelular.getText();
         String email = campoEmail.getText();
-        String endereco = campoEndereco.getText();
+        String rua = campoEndereco.getText();
         String numero = campoNum.getText();
         String cep = campoCep.getText();
         String bairro = campoBairro.getText();
         String cidade = campoCidade.getText();
         String estado = campoEstado.getSelectedItem().toString();
         String complemento = campoComplemento.getText();
-        String sexo;
+        String sexo = null;
         
         if(btnFeminino.isSelected()){
             sexo = "Feminino";
@@ -490,24 +487,60 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         }
         if(btnOutros.isSelected()){
             sexo = "Outros";
+        }     
+        
+        Endereco endereco = new Endereco(rua, numero, cep, bairro, cidade, estado, complemento);
+        
+        //Inserindo pessoa física no banco
+        if(btnPessoaFisica.isSelected()){            
+            Pessoa pessoa = new Pessoa(nome, fantasia, cpfCnpj, dataNascimento, rg, sexo, telefone, celular, email, endereco);
+            try{
+                cliente.adicionarPessoa(pessoa);
+                JOptionPane.showMessageDialog(null, "Cliente pessoa física cadastrado");
+                        
+            }catch (SQLException ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o cliente pessoa física no banco de dados", "Erro", JOptionPane.WARNING_MESSAGE);
+            }       
+        
         }
-
-        //Tratando as exceções dos dados que são números (inteiros e floats)
-        try{
-            cpfCnpj = Integer.parseInt(campoCpfCnpj.getText());
-        }catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(null, "CPF não informado", "Atenção", JOptionPane.WARNING_MESSAGE);
-            
-            return;
-        }        
         
+        //Inserido pessoa juridica no banco
+        if(btnPessoaJuridica.isSelected()){
+            Empresa empresa = new Empresa(nome, fantasia, cpfCnpj, inscriMunicipal, inscriEstadual, celular, telefone, email, endereco);
+            try{
+                cliente.adicionarEmpresa(empresa);
+                JOptionPane.showMessageDialog(null, "Cliente pessoa juridica cadastrado");
+                        
+            }catch (SQLException ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o cliente pessoa juridica no banco de dados", "Erro", JOptionPane.WARNING_MESSAGE);
+            } 
         
-        
-        
-        
-        
-        
-        
+        }
+          
+        campoNome.setText("");
+        campoRazaoSocial.setText("");
+        campoCpfCnpj.setText("");
+        campoRg.setText("");
+        campoIE.setText("");
+        campoIM.setText("");
+        campoDataNascimento.setText("");
+        campoEmail.setText("");
+        campoTelefone.setText("");
+        campoCelular.setText("");
+        campoEndereco.setText("");
+        campoNum.setText("");
+        campoBairro.setText("");
+        campoCidade.setText("");
+        campoEstado.setName("Estado");
+        campoComplemento.setText("");
+        btnFeminino.setSelected(false);
+        btnMasculino.setSelected(false);
+        btnOutros.setSelected(false);
+        btnPessoaFisica.setSelected(false);
+        btnPessoaJuridica.setSelected(false);
+                   
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void campoEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEnderecoActionPerformed

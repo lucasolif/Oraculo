@@ -419,7 +419,7 @@ public class ProdutosForm extends javax.swing.JInternalFrame {
         String cest = cestProduto.getText();
         String csosn = csosnProduto.getSelectedItem().toString();
         Double peso;
-        Double ipi ;
+        Double ipi;
         Double custo;
         Double valorFrete;
         Double margemLucro;

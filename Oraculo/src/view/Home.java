@@ -66,7 +66,7 @@ public class Home extends javax.swing.JFrame {
         cadastros.setText("Cadastros");
         cadastros.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cadastroCliente.setText("Cliente");
+        cadastroCliente.setText("Clientes");
         cadastroCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cadastroClienteActionPerformed(evt);

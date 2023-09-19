@@ -9,7 +9,7 @@ public class Empresa {
     
     private String razaoSocial;
     private String nomeFantasia;
-    private int cnpj;
+    private String cnpj;
     private String inscricaoMunicipal;
     private String inscricaoEstadual;
     private String celular;
@@ -17,7 +17,7 @@ public class Empresa {
     private String email;
     private Endereco endereco;
 
-    public Empresa(String razaoSocial, String nomeFantasia, int cnpj, String inscricaoMunicipal, String inscricaoEstadual, String celular, String telefone, String email, Endereco endereco) {
+    public Empresa(String razaoSocial, String nomeFantasia, String cnpj, String inscricaoMunicipal, String inscricaoEstadual, String celular, String telefone, String email, Endereco endereco) {
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
@@ -33,68 +33,68 @@ public class Empresa {
         return razaoSocial;
     }
 
-    public String getNomeFantasia() {
-        return nomeFantasia;
-    }
-
-    public int getCnpj() {
-        return cnpj;
-    }
-
-    public String getInscricaoMunicipal() {
-        return inscricaoMunicipal;
-    }
-
-    public String getInscricaoEstadual() {
-        return inscricaoEstadual;
-    }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
     public void setRazaoSocial(String razaoSocial) {
         this.razaoSocial = razaoSocial;
+    }
+
+    public String getNomeFantasia() {
+        return nomeFantasia;
     }
 
     public void setNomeFantasia(String nomeFantasia) {
         this.nomeFantasia = nomeFantasia;
     }
 
-    public void setCnpj(int cnpj) {
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
+    }
+
+    public String getInscricaoMunicipal() {
+        return inscricaoMunicipal;
     }
 
     public void setInscricaoMunicipal(String inscricaoMunicipal) {
         this.inscricaoMunicipal = inscricaoMunicipal;
     }
 
+    public String getInscricaoEstadual() {
+        return inscricaoEstadual;
+    }
+
     public void setInscricaoEstadual(String inscricaoEstadual) {
         this.inscricaoEstadual = inscricaoEstadual;
+    }
+
+    public String getCelular() {
+        return celular;
     }
 
     public void setCelular(String celular) {
         this.celular = celular;
     }
 
+    public String getTelefone() {
+        return telefone;
+    }
+
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
@@ -103,16 +103,16 @@ public class Empresa {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.razaoSocial);
-        hash = 83 * hash + Objects.hashCode(this.nomeFantasia);
-        hash = 83 * hash + this.cnpj;
-        hash = 83 * hash + Objects.hashCode(this.inscricaoMunicipal);
-        hash = 83 * hash + Objects.hashCode(this.inscricaoEstadual);
-        hash = 83 * hash + Objects.hashCode(this.celular);
-        hash = 83 * hash + Objects.hashCode(this.telefone);
-        hash = 83 * hash + Objects.hashCode(this.email);
-        hash = 83 * hash + Objects.hashCode(this.endereco);
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.razaoSocial);
+        hash = 37 * hash + Objects.hashCode(this.nomeFantasia);
+        hash = 37 * hash + Objects.hashCode(this.cnpj);
+        hash = 37 * hash + Objects.hashCode(this.inscricaoMunicipal);
+        hash = 37 * hash + Objects.hashCode(this.inscricaoEstadual);
+        hash = 37 * hash + Objects.hashCode(this.celular);
+        hash = 37 * hash + Objects.hashCode(this.telefone);
+        hash = 37 * hash + Objects.hashCode(this.email);
+        hash = 37 * hash + Objects.hashCode(this.endereco);
         return hash;
     }
 
@@ -128,13 +128,13 @@ public class Empresa {
             return false;
         }
         final Empresa other = (Empresa) obj;
-        if (this.cnpj != other.cnpj) {
-            return false;
-        }
         if (!Objects.equals(this.razaoSocial, other.razaoSocial)) {
             return false;
         }
         if (!Objects.equals(this.nomeFantasia, other.nomeFantasia)) {
+            return false;
+        }
+        if (!Objects.equals(this.cnpj, other.cnpj)) {
             return false;
         }
         if (!Objects.equals(this.inscricaoMunicipal, other.inscricaoMunicipal)) {
@@ -159,5 +159,7 @@ public class Empresa {
     public String toString() {
         return "Empresa{" + "razaoSocial=" + razaoSocial + ", nomeFantasia=" + nomeFantasia + ", cnpj=" + cnpj + ", inscricaoMunicipal=" + inscricaoMunicipal + ", inscricaoEstadual=" + inscricaoEstadual + ", celular=" + celular + ", telefone=" + telefone + ", email=" + email + ", endereco=" + endereco + '}';
     }
+
+    
    
 }
