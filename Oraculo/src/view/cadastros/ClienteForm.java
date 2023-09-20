@@ -1,7 +1,7 @@
 package view.cadastros;
 
-import model.Empresa;
-import model.Pessoa;
+import model.PessoaJuridica;
+import model.PessoaFisica;
 import model.Endereco;
 import dao.ClienteDao;
 import java.sql.SQLException;
@@ -493,9 +493,9 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         
         //Inserindo pessoa física no banco
         if(btnPessoaFisica.isSelected()){            
-            Pessoa pessoa = new Pessoa(nome, fantasia, cpfCnpj, dataNascimento, rg, sexo, telefone, celular, email, endereco);
+            PessoaFisica pessoa = new PessoaFisica(nome, nome, cpfCnpj, dataNascimento, rg, sexo, telefone, celular, email, endereco);
             try{
-                cliente.adicionarPessoa(pessoa);
+                cliente.adicionarPessoaFisica(pessoa);
                 JOptionPane.showMessageDialog(null, "Cliente pessoa física cadastrado");
                         
             }catch (SQLException ex) {
@@ -507,9 +507,9 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         
         //Inserido pessoa juridica no banco
         if(btnPessoaJuridica.isSelected()){
-            Empresa empresa = new Empresa(nome, fantasia, cpfCnpj, inscriMunicipal, inscriEstadual, celular, telefone, email, endereco);
+            PessoaJuridica empresa = new PessoaJuridica(nome, fantasia, cpfCnpj, inscriMunicipal, inscriEstadual, celular, telefone, email, endereco);
             try{
-                cliente.adicionarEmpresa(empresa);
+                cliente.adicionarPessoaJuridica(empresa);
                 JOptionPane.showMessageDialog(null, "Cliente pessoa juridica cadastrado");
                         
             }catch (SQLException ex) {

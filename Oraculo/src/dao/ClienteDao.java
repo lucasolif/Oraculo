@@ -2,15 +2,15 @@
 package dao;
 
 import jdbc.Conexao;
-import model.Empresa;
-import model.Pessoa;
+import model.PessoaJuridica;
+import model.PessoaFisica;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ClienteDao {
     
-    public void adicionarEmpresa(Empresa empresa) throws SQLException {
+    public void adicionarPessoaJuridica(PessoaJuridica empresa) throws SQLException {
         Connection conexao = new Conexao().getConexao();
         String sql = "insert into empresa (nome,nomeFantasia,cpfCnpj,rg,inscricaoEstadual,inscricaoMunicipal,sexo,dataNascimento,telefone,celular,email,endereco,numeroCasa,cep,bairro,cidade,estado,complemento) value (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement ps = conexao.prepareStatement(sql);
@@ -40,13 +40,13 @@ public class ClienteDao {
     }
     
     
-    public void adicionarPessoa(Pessoa pessoa) throws SQLException {
+    public void adicionarPessoaFisica(PessoaFisica pessoa) throws SQLException {
         Connection conexao = new Conexao().getConexao();
         String sql = "insert into empresa (nome,nomeFantasia,cpfCnpj,rg,inscricaoEstadual,inscricaoMunicipal,sexo,dataNascimento,telefone,celular,email,endereco,numeroCasa,cep,bairro,cidade,estado,complemento) value (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement ps = conexao.prepareStatement(sql);
         
         ps.setString(1, pessoa.getNome());
-        ps.setString(2, pessoa.getNomeFantasia());
+        ps.setString(2, pessoa.getNome());
         ps.setString(3, pessoa.getCpf());
         ps.setString(4, pessoa.getRg());
         ps.setString(5, "");

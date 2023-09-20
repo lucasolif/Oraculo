@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Pessoa {
     
     private String nome;
-    private String nomeFantasia;
+    private String sobrenome;
     private String cpf;
     private String dataNascimento;
     private String rg;
@@ -16,9 +16,9 @@ public class Pessoa {
     private String email; 
     private Endereco endereco;
 
-    public Pessoa(String nome, String nomeFantasia, String cpf, String dataNascimento, String rg, String sexo, String telefone, String celular, String email, Endereco endereco) {
+    public Pessoa(String nome, String sobrenome, String cpf, String dataNascimento, String rg, String sexo, String telefone, String celular, String email, Endereco endereco) {
         this.nome = nome;
-        this.nomeFantasia = nomeFantasia;
+        this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.rg = rg;
@@ -37,12 +37,12 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getNomeFantasia() {
-        return nomeFantasia;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setNomeFantasia(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getCpf() {
@@ -111,17 +111,17 @@ public class Pessoa {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 71 * hash + Objects.hashCode(this.nome);
-        hash = 71 * hash + Objects.hashCode(this.nomeFantasia);
-        hash = 71 * hash + Objects.hashCode(this.cpf);
-        hash = 71 * hash + Objects.hashCode(this.dataNascimento);
-        hash = 71 * hash + Objects.hashCode(this.rg);
-        hash = 71 * hash + Objects.hashCode(this.sexo);
-        hash = 71 * hash + Objects.hashCode(this.telefone);
-        hash = 71 * hash + Objects.hashCode(this.celular);
-        hash = 71 * hash + Objects.hashCode(this.email);
-        hash = 71 * hash + Objects.hashCode(this.endereco);
+        int hash = 7;
+        hash = 83 * hash + Objects.hashCode(this.nome);
+        hash = 83 * hash + Objects.hashCode(this.sobrenome);
+        hash = 83 * hash + Objects.hashCode(this.cpf);
+        hash = 83 * hash + Objects.hashCode(this.dataNascimento);
+        hash = 83 * hash + Objects.hashCode(this.rg);
+        hash = 83 * hash + Objects.hashCode(this.sexo);
+        hash = 83 * hash + Objects.hashCode(this.telefone);
+        hash = 83 * hash + Objects.hashCode(this.celular);
+        hash = 83 * hash + Objects.hashCode(this.email);
+        hash = 83 * hash + Objects.hashCode(this.endereco);
         return hash;
     }
 
@@ -140,7 +140,7 @@ public class Pessoa {
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
-        if (!Objects.equals(this.nomeFantasia, other.nomeFantasia)) {
+        if (!Objects.equals(this.sobrenome, other.sobrenome)) {
             return false;
         }
         if (!Objects.equals(this.cpf, other.cpf)) {
@@ -169,9 +169,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "nome=" + nome + ", nomeFantasia=" + nomeFantasia + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", rg=" + rg + ", sexo=" + sexo + ", telefone=" + telefone + ", celular=" + celular + ", email=" + email + ", endereco=" + endereco + '}';
-    }
-
-    
+        return "Pessoa{" + "nome=" + nome + ", sobrenome=" + sobrenome + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento + ", rg=" + rg + ", sexo=" + sexo + ", telefone=" + telefone + ", celular=" + celular + ", email=" + email + ", endereco=" + endereco + '}';
+    }  
     
 }

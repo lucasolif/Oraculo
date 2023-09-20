@@ -6,7 +6,7 @@ import Cadastros.ContasCaixa;
 import Cadastros.FormasPagto;
 import view.cadastros.ProdutosForm;
 import Cadastros.Servicos;
-import Cadastros.Usuario;
+import Cadastros.UsuarioForm;
 
 
 public class Home extends javax.swing.JFrame {
@@ -212,7 +212,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_cadastroServicosActionPerformed
 
     private void cadastroUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroUsuariosActionPerformed
-        Usuario cadastroUsuario = new Usuario();
+        UsuarioForm cadastroUsuario = new UsuarioForm();
         painelHome.add(cadastroUsuario);
         cadastroUsuario.setVisible(true);        
     }//GEN-LAST:event_cadastroUsuariosActionPerformed
