@@ -12,8 +12,9 @@ public class Usuario {
     private String sobrenome;
     private String email;
     private String celular;
+    private String setor;
 
-    public Usuario(String login, String senha, String cod, String nome, String sobrenome, String email, String celular) {
+    public Usuario(String login, String senha, String cod, String nome, String sobrenome, String email, String celular, String setor) {
         this.login = login;
         this.senha = senha;
         this.cod = cod;
@@ -21,6 +22,7 @@ public class Usuario {
         this.sobrenome = sobrenome;
         this.email = email;
         this.celular = celular;
+        this.setor = setor;
     }
 
     public String getLogin() {
@@ -79,16 +81,25 @@ public class Usuario {
         this.celular = celular;
     }
 
+    public String getSetor() {
+        return setor;
+    }
+
+    public void setSetor(String setor) {
+        this.setor = setor;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 61 * hash + Objects.hashCode(this.login);
-        hash = 61 * hash + Objects.hashCode(this.senha);
-        hash = 61 * hash + Objects.hashCode(this.cod);
-        hash = 61 * hash + Objects.hashCode(this.nome);
-        hash = 61 * hash + Objects.hashCode(this.sobrenome);
-        hash = 61 * hash + Objects.hashCode(this.email);
-        hash = 61 * hash + Objects.hashCode(this.celular);
+        int hash = 5;
+        hash = 29 * hash + Objects.hashCode(this.login);
+        hash = 29 * hash + Objects.hashCode(this.senha);
+        hash = 29 * hash + Objects.hashCode(this.cod);
+        hash = 29 * hash + Objects.hashCode(this.nome);
+        hash = 29 * hash + Objects.hashCode(this.sobrenome);
+        hash = 29 * hash + Objects.hashCode(this.email);
+        hash = 29 * hash + Objects.hashCode(this.celular);
+        hash = 29 * hash + Objects.hashCode(this.setor);
         return hash;
     }
 
@@ -122,12 +133,15 @@ public class Usuario {
         if (!Objects.equals(this.email, other.email)) {
             return false;
         }
-        return Objects.equals(this.celular, other.celular);
+        if (!Objects.equals(this.celular, other.celular)) {
+            return false;
+        }
+        return Objects.equals(this.setor, other.setor);
     }
 
     @Override
     public String toString() {
-        return "Usuario{" + "login=" + login + ", senha=" + senha + ", cod=" + cod + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", celular=" + celular + '}';
+        return "Usuario{" + "login=" + login + ", senha=" + senha + ", cod=" + cod + ", nome=" + nome + ", sobrenome=" + sobrenome + ", email=" + email + ", celular=" + celular + ", setor=" + setor + '}';
     }
     
     
