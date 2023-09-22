@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class UsuarioDao {
     
@@ -31,29 +32,33 @@ public class UsuarioDao {
         
     }
     
-    public Usuario logar(String login, String senha) throws SQLException{
+    public ResultSet validarLogin(String login, String senha) throws SQLException{
         
         Connection conexao = new Conexao().getConexao();
-        String sql = "SELECT * FROM usuario WHERE login=? and senha=?";
-        PreparedStatement ps = Conexao.prepareStatement(sql);
         
-        ps.setString(1, login);
-        ps.setString(2, senha);
+        try {
+            String sql = "SELECT * FROM usuario WHERE login=? and senha=?";
+            
+            PreparedStatement ps = Conexao.prepareStatement(sql);
+            ps.setString(1, login);
+            ps.setString(2, senha);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            rs.close();
+            ps.close();
+            conexao.close();
         
-        ResultSet rs = ps.executeQuery();
-        
-                //enquanto estiver dado na tabela
-        Usuario usuario = null;
-        while(rs.next()){
-            usuario = new Usuario();
-            usuario.setLogin(rs.getString("login"));
-            usuario.setSenha(rs.getString("senha"));
+            return rs;
+            
+        } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, "UsuarioDao" + erro);
+            
+            return null;
+            
         }
         
-        rs.close();
-        ps.close();
-        conexao.close();
-        
-        return usuario;
+
+
     }
 }

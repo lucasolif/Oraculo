@@ -237,17 +237,9 @@ public class UsuarioForm extends javax.swing.JInternalFrame {
                 try{
                     usuarioDao.adicionarUsuario(usuario);
                     JOptionPane.showMessageDialog(null, "Usuário cadastrado");
-
-                    usuarioNome.setText("");
-                    usuarioSobrenome.setText("");
-                    usuarioCelular.setText("");
-                    usuarioEmail.setText("");
-                    usuarioSexo.setName("Escolher");
-                    usuarioSetor.setText("");
-                    usuarioLogin.setText("");
-                    usuarioCodigo.setText("");
-                    usuarioSenha.setText("");
-                    usuarioConfirmSenha.setText("");
+                    
+                    //Limpando os campos inseridos
+                    limparCampos();
 
                 }catch(SQLException ex){
                     ex.printStackTrace();
@@ -293,4 +285,20 @@ public class UsuarioForm extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> usuarioSexo;
     private javax.swing.JTextField usuarioSobrenome;
     // End of variables declaration//GEN-END:variables
+
+    private void limparCampos(){
+        
+        usuarioNome.setText("");
+        usuarioSobrenome.setText("");
+        usuarioCelular.setText("");
+        usuarioEmail.setText("");
+        usuarioSexo.setName("Escolher");
+        usuarioSetor.setText("");
+        usuarioLogin.setText("");
+        usuarioCodigo.setText("");
+        usuarioSenha.setText("");
+        usuarioConfirmSenha.setText("");
+        
+    }
+    
 }

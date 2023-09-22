@@ -3,6 +3,7 @@ package view;
 import dao.UsuarioDao;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 import model.Usuario;
 
 public class LoginForm extends javax.swing.JFrame {
@@ -100,30 +101,7 @@ public class LoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        
-        String login = campoLogin.getText();
-        String senha = String.valueOf(campoSenha.getPassword());
-        
-        if(!senha.isEmpty() && !login.isEmpty()){
-            
-            UsuarioDao usuarioDao = new UsuarioDao();
-            
-            try{
-                
-                Usuario usuario = usuarioDao.logar(login, senha);
-                if(usuario == null){
-                    JOptionPane.showMessageDialog(null, "Login ou senha inválida", "Erro",JOptionPane.WARNING_MESSAGE);
-                    return;
-                }
-                
-                Home telaInicial = new Home();
-                telaInicial.setVisible(true);
-                
-            }catch(SQLException ex){
-                JOptionPane.showMessageDialog(null, "Erro na consulta", "Erro",JOptionPane.WARNING_MESSAGE);
-            }
-            
-        }
+        logar();
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     /**
@@ -170,4 +148,33 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
+
+    private void logar(){
+        String login = campoLogin.getText();
+        String senha = String.valueOf(campoSenha.getPassword());
+        
+        if(!senha.isEmpty() && !login.isEmpty()){
+            
+            try{
+                UsuarioDao usuarioDao = new UsuarioDao();
+                ResultSet usuario = usuarioDao.validarLogin(login, senha);
+                
+                if(usuario == null){
+                    JOptionPane.showMessageDialog(null, "Login ou senha inválida", "Erro",JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                else{
+                    Home telaInicial = new Home();
+                    telaInicial.setVisible(true);
+                    
+                    dispose();
+                }
+
+            }catch(SQLException ex){
+                JOptionPane.showMessageDialog(null, "Erro na consulta", "Erro",JOptionPane.WARNING_MESSAGE);
+            }
+            
+        }
+    }
+
 }

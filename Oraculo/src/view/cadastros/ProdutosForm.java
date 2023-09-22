@@ -501,24 +501,7 @@ public class ProdutosForm extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Produto cadastrado");
             
             //Limpando os campos para inserir novos dados
-            cestProduto.setText("");
-            codigoBarrasProduto.setText("");
-            codigoEanProduto.setText("");
-            codigoGtinProduto.setText("");
-            csosnProduto.setName("Selecione");
-            cstProduto.setName("Selecione");
-            custoProduto.setText("");
-            descontoProduto.setText("");
-            descricaoProduto.setText("");
-            freteProduto.setText("");
-            ipiProduto.setText("");
-            marcaProduto.setText("");
-            margemLucroProduto.setText("");
-            ncmProduto.setText("");
-            outrasDespesaProduto.setText("");
-            pesoProduto.setText("");
-            precoVendaProduto.setText("");
-            unidadeProduto.setName("Selecione");
+            limparCampos();
             
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -575,4 +558,26 @@ public class ProdutosForm extends javax.swing.JInternalFrame {
     private javax.swing.JTextField precoVendaProduto;
     private javax.swing.JComboBox<String> unidadeProduto;
     // End of variables declaration//GEN-END:variables
+
+    private void limparCampos(){
+        cestProduto.setText("");
+        codigoBarrasProduto.setText("");
+        codigoEanProduto.setText("");
+        codigoGtinProduto.setText("");
+        csosnProduto.setName("Selecione");
+        cstProduto.setName("Selecione");
+        custoProduto.setText("");
+        descontoProduto.setText("");
+        descricaoProduto.setText("");
+        freteProduto.setText("");
+        ipiProduto.setText("");
+        marcaProduto.setText("");
+        margemLucroProduto.setText("");
+        ncmProduto.setText("");
+        outrasDespesaProduto.setText("");
+        pesoProduto.setText("");
+        precoVendaProduto.setText("");
+        unidadeProduto.setName("Selecione");
+    }
+
 }

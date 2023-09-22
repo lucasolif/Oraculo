@@ -477,17 +477,9 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         String cidade = campoCidade.getText();
         String estado = campoEstado.getSelectedItem().toString();
         String complemento = campoComplemento.getText();
-        String sexo = null;
+        String sexo = validarSexo();
         
-        if(btnFeminino.isSelected()){
-            sexo = "Feminino";
-        }
-        if(btnMasculino.isSelected()){
-            sexo = "Masculino";
-        }
-        if(btnOutros.isSelected()){
-            sexo = "Outros";
-        }     
+    
         
         Endereco endereco = new Endereco(rua, numero, cep, bairro, cidade, estado, complemento);
         
@@ -497,12 +489,15 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             try{
                 cliente.adicionarPessoaFisica(pessoa);
                 JOptionPane.showMessageDialog(null, "Cliente pessoa física cadastrado");
+                
+                //Limpandos os campos que foram inseridos 
+                limparCampos();
                         
             }catch (SQLException ex) {
                 ex.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o cliente pessoa física no banco de dados", "Erro", JOptionPane.WARNING_MESSAGE);
             }       
-        
+            
         }
         
         //Inserido pessoa juridica no banco
@@ -511,36 +506,17 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             try{
                 cliente.adicionarPessoaJuridica(empresa);
                 JOptionPane.showMessageDialog(null, "Cliente pessoa juridica cadastrado");
-                        
+                
+                //Limpandos os campos que foram inseridos 
+                limparCampos();
+                                        
             }catch (SQLException ex) {
                 ex.printStackTrace();
                 JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o cliente pessoa juridica no banco de dados", "Erro", JOptionPane.WARNING_MESSAGE);
             } 
         
-        }
-          
-        campoNome.setText("");
-        campoRazaoSocial.setText("");
-        campoCpfCnpj.setText("");
-        campoRg.setText("");
-        campoIE.setText("");
-        campoIM.setText("");
-        campoDataNascimento.setText("");
-        campoEmail.setText("");
-        campoTelefone.setText("");
-        campoCelular.setText("");
-        campoEndereco.setText("");
-        campoNum.setText("");
-        campoBairro.setText("");
-        campoCidade.setText("");
-        campoEstado.setName("Estado");
-        campoComplemento.setText("");
-        btnFeminino.setSelected(false);
-        btnMasculino.setSelected(false);
-        btnOutros.setSelected(false);
-        btnPessoaFisica.setSelected(false);
-        btnPessoaJuridica.setSelected(false);
-                   
+        } 
+                 
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void campoEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoEnderecoActionPerformed
@@ -598,4 +574,46 @@ public class ClienteForm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel painelTipoPessoa;
     private javax.swing.ButtonGroup pessoFisicaJuridica;
     // End of variables declaration//GEN-END:variables
+
+    private String validarSexo(){
+        String sexo = "";
+        
+        if(btnFeminino.isSelected()){
+            sexo = "Feminino";
+        }
+        if(btnMasculino.isSelected()){
+            sexo = "Masculino";
+        }
+        if(btnOutros.isSelected()){
+            sexo = "Outros";
+        } 
+        
+        return sexo;
+    }
+    
+    private void limparCampos(){
+        
+        campoNome.setText("");
+        campoRazaoSocial.setText("");
+        campoCpfCnpj.setText("");
+        campoRg.setText("");
+        campoIE.setText("");
+        campoIM.setText("");
+        campoDataNascimento.setText("");
+        campoEmail.setText("");
+        campoTelefone.setText("");
+        campoCelular.setText("");
+        campoEndereco.setText("");
+        campoNum.setText("");
+        campoBairro.setText("");
+        campoCidade.setText("");
+        campoEstado.setName("Estado");
+        campoComplemento.setText("");
+        btnFeminino.setSelected(false);
+        btnMasculino.setSelected(false);
+        btnOutros.setSelected(false);
+        btnPessoaFisica.setSelected(false);
+        btnPessoaJuridica.setSelected(false);
+    }
+
 }
