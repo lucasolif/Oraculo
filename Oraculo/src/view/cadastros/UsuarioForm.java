@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 public class UsuarioForm extends javax.swing.JInternalFrame {
 
+    UsuarioDao usuarioDao = new UsuarioDao();
 
     public UsuarioForm() {
         initComponents();
@@ -224,9 +225,44 @@ public class UsuarioForm extends javax.swing.JInternalFrame {
         String email = usuarioEmail.getText();
         String sexo = usuarioSexo.getSelectedItem().toString();
         String setor = usuarioSetor.getText();
-        String usuario = usuarioLogin.getText();
+        String login = usuarioLogin.getText();
         String codigo = usuarioCodigo.getText();
         String senha = usuarioSenha.getText();
+        String confirmSenha = usuarioConfirmSenha.getText();
+        
+        if(!nome.isEmpty() && !sobreNome.isEmpty() && !celular.isEmpty() && !email.isEmpty() && !sexo.isEmpty() && !setor.isEmpty() && !login.isEmpty() && !codigo.isEmpty() && !senha.isEmpty()){
+            if(confirmSenha.equalsIgnoreCase(senha)){
+                Usuario usuario = new Usuario(login, senha, codigo, nome, sobreNome, email, celular, setor, sexo);
+            
+                try{
+                    usuarioDao.adicionarUsuario(usuario);
+                    JOptionPane.showMessageDialog(null, "Usuário cadastrado");
+
+                    usuarioNome.setText("");
+                    usuarioSobrenome.setText("");
+                    usuarioCelular.setText("");
+                    usuarioEmail.setText("");
+                    usuarioSexo.setName("Escolher");
+                    usuarioSetor.setText("");
+                    usuarioLogin.setText("");
+                    usuarioCodigo.setText("");
+                    usuarioSenha.setText("");
+                    usuarioConfirmSenha.setText("");
+
+                }catch(SQLException ex){
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Erro ao tentar inserir o usuário no banco de dados", "Erro", JOptionPane.WARNING_MESSAGE);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Senhas diferente. Digite a mesma senha em ambos os campos", "Erro", JOptionPane.WARNING_MESSAGE);
+            } 
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Campos vazios. Preencha todos os campos", "Erro", JOptionPane.WARNING_MESSAGE);
+        }
+        
+        
         
         
     }//GEN-LAST:event_btnGravarActionPerformed

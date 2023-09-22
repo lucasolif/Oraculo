@@ -4,9 +4,9 @@ package view;
 import view.cadastros.ClienteForm;
 import Cadastros.ContasCaixa;
 import Cadastros.FormasPagto;
+import Cadastros.ServicosForm;
 import view.cadastros.ProdutosForm;
-import Cadastros.Servicos;
-import Cadastros.UsuarioForm;
+import view.cadastros.UsuarioForm;
 
 
 public class Home extends javax.swing.JFrame {
@@ -206,7 +206,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_cadastroProdutosActionPerformed
 
     private void cadastroServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroServicosActionPerformed
-        Servicos cadastroServicos = new Servicos();
+        ServicosForm cadastroServicos = new ServicosForm();
         painelHome.add(cadastroServicos);
         cadastroServicos.setVisible(true);
     }//GEN-LAST:event_cadastroServicosActionPerformed
