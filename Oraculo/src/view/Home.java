@@ -4,7 +4,7 @@ package view;
 import view.cadastros.ClienteForm;
 import Cadastros.ContasCaixa;
 import Cadastros.FormasPagto;
-import Cadastros.ServicosForm;
+import view.cadastros.ServicosForm;
 import view.cadastros.ProdutosForm;
 import view.cadastros.UsuarioForm;
 

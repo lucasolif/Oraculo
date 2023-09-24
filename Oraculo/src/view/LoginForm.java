@@ -3,7 +3,6 @@ package view;
 import dao.UsuarioDao;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import java.sql.ResultSet;
 import model.Usuario;
 
 public class LoginForm extends javax.swing.JFrame {
