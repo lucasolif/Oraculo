@@ -6,15 +6,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
+
 
 public class UsuarioDao {
     
     public void adicionarUsuario(Usuario usuario) throws SQLException{
         
         Connection conexao = new Conexao().getConexao();
-        String sqk = "insert into usuario (login,senha,nome,sobrenome,email,celular,setor,codigo,sexo) value (?,?,?,?,?,?,?,?,?)";
-        PreparedStatement ps = conexao.prepareStatement(sqk);
+        String sql = "insert into usuario (login,senha,nome,sobrenome,email,celular,setor,codigo,sexo) value (?,?,?,?,?,?,?,?,?)";
+        PreparedStatement ps = conexao.prepareStatement(sql);
         
         ps.setString(1, usuario.getLogin());
         ps.setString(2, usuario.getSenha());
@@ -32,32 +32,29 @@ public class UsuarioDao {
         
     }
     
-    public ResultSet validarLogin(String login, String senha) throws SQLException{
+    public Usuario validarLogin(String login, String senha) throws SQLException{
         
         Connection conexao = new Conexao().getConexao();
+        String sql = "SELECT * FROM usuario WHERE login=? and senha=?";
         
-        try {
-            String sql = "SELECT * FROM usuario WHERE login=? and senha=?";
-            
-            PreparedStatement ps = Conexao.prepareStatement(sql);
-            ps.setString(1, login);
-            ps.setString(2, senha);
-            
-            ResultSet rs = ps.executeQuery();
-            
-            rs.close();
-            ps.close();
-            conexao.close();
+        PreparedStatement ps = conexao.prepareStatement(sql);
+        ps.setString(1, login);
+        ps.setString(2, senha);
+
+        ResultSet rs = ps.executeQuery();
         
-            return rs;
-            
-        } catch (SQLException erro) {
-            JOptionPane.showMessageDialog(null, "UsuarioDao" + erro);
-            
-            return null;
-            
+        Usuario usuario = null;
+        while(rs.next()){
+            usuario = new Usuario();
+            usuario.setLogin(rs.getString("login"));
+            usuario.setSenha(rs.getString("senha"));
         }
-        
+
+        rs.close();
+        ps.close();
+        conexao.close();
+
+        return usuario;
 
 
     }

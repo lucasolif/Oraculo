@@ -492,6 +492,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
                 
                 //Limpandos os campos que foram inseridos 
                 limparCampos();
+                dispose();
                         
             }catch (SQLException ex) {
                 ex.printStackTrace();

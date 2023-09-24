@@ -1,5 +1,6 @@
 
 package view.cadastros;
+
 import model.Usuario;
 import dao.UsuarioDao;
 import java.sql.SQLException;

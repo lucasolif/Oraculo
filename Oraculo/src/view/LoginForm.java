@@ -157,11 +157,10 @@ public class LoginForm extends javax.swing.JFrame {
             
             try{
                 UsuarioDao usuarioDao = new UsuarioDao();
-                ResultSet usuario = usuarioDao.validarLogin(login, senha);
+                Usuario usuario = usuarioDao.validarLogin(login, senha);
                 
                 if(usuario == null){
                     JOptionPane.showMessageDialog(null, "Login ou senha inválida", "Erro",JOptionPane.WARNING_MESSAGE);
-                    return;
                 }
                 else{
                     Home telaInicial = new Home();
@@ -175,6 +174,9 @@ public class LoginForm extends javax.swing.JFrame {
             }
             
         }
+        else{
+            JOptionPane.showMessageDialog(null, "Campo vazio. Preencha todos os campos", "Erro",JOptionPane.WARNING_MESSAGE);
+        }
     }
-
 }
+
